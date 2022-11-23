@@ -140,15 +140,25 @@ img {
   display: flex;
   margin-left: auto;
 }
+.contacts-item {
+  display: flex;
+  align-items: center;
+}
+.contacts-item > .icon {
+  fill: currentColor;
+  margin-right: 10px;
+}
 .contacts.list > .contacts-item:not(:last-child) {
   margin-right: 50px;
 }
 .contacts .link {
   font-weight: 500;
 }
-.contacts .link:hover,
-.contacts .link:focus {
+
+.contacts-item:hover,
+.contacts-item:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 /* page -------------------------------INDEX-------------------------- */
 
@@ -194,15 +204,23 @@ img {
   color: var(--hero-text-color);
 }
 /* ----------------------------- section Features */
-.section.features {
+.features .container {
+  display: flex;
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.features .container {
-  display: flex;
-}
 .feature-list {
   display: flex;
+}
+.feature-icon {
+  display: inline-flex;
+  min-width: 270px;
+  min-height: 120px;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-secondary-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 .feature-list > li {
   display: block;
@@ -219,13 +237,10 @@ img {
   line-height: 1.71;
 }
 /* ------------------------------ section WORKS */
-.section.work {
-  padding-top: 0;
-  padding-bottom: 94px;
-}
 .work .container {
   display: flex;
   flex-direction: column;
+  padding-bottom: 94px;
 }
 .work.title {
   display: block;
@@ -241,11 +256,11 @@ img {
 /* ------------------------------section Team */
 .section.team {
   background-color: var(--bg-secondary-color);
-  padding-top: 94px;
-  padding-bottom: 94px;
 }
 .team .container {
   display: flex;
+  padding-top: 94px;
+  padding-bottom: 94px;
   flex-direction: column;
 }
 .team.title {
